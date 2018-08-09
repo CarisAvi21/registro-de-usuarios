@@ -1,0 +1,264 @@
+{
+  "terminal1": [{
+      "name": "Laura Guitierrez",
+      "company": "BAF CONSULTING",
+      "position": "Directora",
+      "mail": "baf.cons@baf-c.com",
+      "location": [
+        "piso PB",
+        "oficina 1"
+      ]
+    },
+    {
+      "name": "Adrian Ortega",
+      "company": "CORREDURÍA 35",
+      "position": "Recursos Humanos",
+      "mail": "info@correduria35df.com.mx",
+      "location": [
+        "piso PB",
+        "oficina 2"
+      ]
+    },
+    {
+      "name": "Adrian Hernandez",
+      "company": "CULTURA DH",
+      "position": "Drirector",
+      "mail": "cult@culturadh.org",
+      "location": [
+        "piso PB",
+        "oficina 3"
+      ]
+    },
+    {
+      "name": "Pedro Mendez",
+      "company": "GALLO DESIGN",
+      "position": "Diseñador",
+      "mail": "g.des@somosgallo.com",
+      "location": [
+        "piso PB",
+        "oficina 4"
+      ]
+    },
+    {
+      "name": "Luis Iniesta",
+      "company": "GRAHAM ABOGADOS",
+      "position": "Abogado",
+      "mail": "info@grahamabogados.mx",
+      "location": [
+        "piso 1",
+        "oficina 1"
+      ]
+    },
+    {
+      "name": "Estela Duran",
+      "company": "MINDWAY",
+      "position": "Gerente",
+      "mail": "mind@mindway.edu.es",
+      "location": [
+        "piso 1",
+        "oficina 2"
+      ]
+    },
+    {
+      "name": "Patricia Almeida",
+      "company": "IN STYLE",
+      "position": "Recursos Humanos",
+      "mail": "esmeralda@agenciinstyle.com",
+      "location": [
+        "piso 1",
+        "oficina 3"
+      ]
+    },
+    {
+      "name": "Leopoldo Gomez",
+      "company": "LEGION BRAND",
+      "position": "Diseñador",
+      "mail": "info@legionb.com",
+      "location": [
+        "piso 1",
+        "oficina 4"
+      ]
+    },
+    {
+      "name": "Andrea Lujan",
+      "company": "MANAGERS ANÓNIMOS",
+      "position": "Representante",
+      "mail": "info@mano.la",
+      "location": [
+        "piso 2",
+        "oficina 1"
+      ]
+    },
+    {
+      "name": "Julieta Alcazar",
+      "company": "MERCARTE",
+      "position": "Recursos Humanos",
+      "mail": "merca@mercarte.com.mx",
+      "location": [
+        "piso 2",
+        "oficina 2"
+      ]
+    },
+    {
+      "name": "Esteban Oribe",
+      "company": "MESSEBAU",
+      "position": "Diseñador",
+      "mail": "info@mlatam.com",
+      "location": [
+        "piso 2",
+        "oficina 3"
+      ]
+    },
+    {
+      "name": "Bruno Perez",
+      "company": "PEREZ REYES Y ASOCIADOS",
+      "position": "Abogado",
+      "mail": "const@perezreyes.com.mx",
+      "location": [
+        "piso 2",
+        "oficina 4"
+      ]
+    },
+    {
+      "name": "Mariana Patiño",
+      "company": "PIXI",
+      "position": "Diseñadora",
+      "mail": "pix@uosocl.com",
+      "location": [
+        "piso 3",
+        "oficina 1"
+      ]
+    },
+    {
+      "name": "Leonardo Galvan",
+      "company": "RABBIT HOUSE",
+      "position": "Fotografo",
+      "mail": "film@rabbithouse.com.mx",
+      "location": [
+        "piso 3",
+        "oficina 2"
+      ]
+    },
+    {
+      "name": "Ismael Cano",
+      "company": "SVX",
+      "position": "Director",
+      "mail": "info@svx.mx",
+      "location": [
+        "piso 3",
+        "oficina 3"
+      ]
+    },
+    {
+      "name": "Adrian Tores",
+      "company": "TES AMERICA",
+      "position": "Director",
+      "mail": "adi21@tesamerica.com.mx",
+      "location": [
+        "piso 3",
+        "oficina 4"
+      ]
+    },
+    {
+      "name": "Alicia Palomarez",
+      "company": "TIERRA CAPITAL",
+      "position": "Recursos Humanos",
+      "mail": "palomarez@tierracapital.mx",
+      "location": [
+        "piso PB",
+        "oficina 5"
+      ]
+    },
+    {
+      "name": "Rodrigo Rul",
+      "company": "TRIPLE JUMPS",
+      "position": "Manager",
+      "mail": "rodrigo@triplejump.eu",
+      "location": [
+        "piso 2",
+        "oficina 6"
+      ]
+    },
+    {
+      "name": "Laura Espinoza",
+      "company": "UPSOCL",
+      "position": "Diseñadora",
+      "mail": "laura@upsocl.com",
+      "location": [
+        "piso 3",
+        "oficina 6"
+      ]
+    },
+    {
+      "name": "Hector Rodriguez",
+      "company": "VIA DIRECT",
+      "position": "Director",
+      "mail": "h.rodriguez@viadirect.com",
+      "location": [
+        "piso 1",
+        "oficina 5"
+      ]
+    },
+    {
+      "name": "Martin Carrillo",
+      "company": "YOUR PAY CHOICE",
+      "position": "Gerente",
+      "mail": "inf@yourpaychoice.com",
+      "location": [
+        "piso 1",
+        "oficina 6"
+      ]
+    },
+    {
+      "name": "Gina Palomares",
+      "company": "ZOOMIN TV",
+      "position": "Diseñadora",
+      "mail": "palomares.g@zoom.tv",
+      "location": [
+        "piso 3",
+        "oficina 6"
+      ]
+    }
+    , {
+      "name": "Monica Vidal",
+      "company": "CIC MEDIA",
+      "position": "Recursos Humanos",
+      "mail": "user.info@cicmedia.tv",
+      "location": [
+        "piso 3",
+        "oficina 5"
+      ]
+    },
+    {
+      "name": "Edith MAcias",
+      "company": "MEDICONECTA",
+      "position": "Diseñadora",
+      "mail": "r.medi@mediconecta.com",
+      "location": [
+        "piso 2",
+        "oficina 6"
+      ]
+    },
+    {
+      "name": "Lucille Baratier",
+      "company": "LABORATORIA",
+      "position": "Training Manager",
+      "mail": "lulu@laboratoria.la",
+      "location": [
+        "piso 4",
+        "oficina 1"
+      ]
+    },
+    {
+      "name": "Miguel Gutierrez",
+      "company": "BACKYARD",
+      "position": "Publicista",
+      "mail": "m_gtr@backyard.com.mx",
+      "location": [
+        "piso 2",
+        "oficina 5"
+      ]
+    }
+
+  ]
+}
