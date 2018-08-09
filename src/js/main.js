@@ -9,3 +9,7 @@ const player = document.getElementById('player');
 const snapshotCanvas = document.getElementById('snapshot');
 const captureButton = document.getElementById('capture');
 let videoTracks;
+
+const home = () => {
+  window.location.assign('views/index.html');
+};

@@ -1,5 +1,4 @@
 let button = document.getElementById('notificacion');
-
 button.addEventListener('click', function() {
   notify();
 });
@@ -19,4 +18,4 @@ const notify = () => {
       }
     });
   }
-}
+};

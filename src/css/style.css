@@ -1,3 +1,7 @@
+*{
+    margin: 0px;
+    padding: 0px;
+  }
 
 /* font-family:Roboto,Arial,sans-serif;  
 #231F20 fondo gris de terminal 1 
@@ -9,3 +13,8 @@ input:valid {
 input:invalid {
     border-color: red;
 }
+
+h1{
+    text-align: center;
+}
+
