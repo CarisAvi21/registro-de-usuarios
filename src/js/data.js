@@ -12,19 +12,19 @@ firebase.initializeApp(config);
 let db = firebase.firestore();
 let storage = firebase.storage();
 let blobURL = '';
-    // WebCamera Functionality 
-    let handleSuccess = function(stream) {
-      // Attach the video stream to the video element and autoplay.
-      player.srcObject = stream;
-      videoTracks = stream.getVideoTracks();
+// WebCamera Functionality 
+let handleSuccess = function(stream) {
+  // Attach the video stream to the video element and autoplay.
+  player.srcObject = stream;
+  videoTracks = stream.getVideoTracks();
     
-    captureButton.addEventListener('click', function() {
-      let context = snapshot.getContext('2d');
-      // Draw the video frame to the canvas.
-      context.drawImage(player, 0, 0, snapshotCanvas.width, 
-        snapshotCanvas.height);
-      videoTracks.forEach(function(track) {
-    track.stop();
+  captureButton.addEventListener('click', function() {
+    let context = snapshot.getContext('2d');
+    // Draw the video frame to the canvas.
+    context.drawImage(player, 0, 0, snapshotCanvas.width, 
+      snapshotCanvas.height);
+    videoTracks.forEach(function(track) {
+      track.stop();
     });
 
     // console.log(context.createImageData());
@@ -34,20 +34,20 @@ let blobURL = '';
     //   console.log("Final blob:", finalBlob);
     // });
 
-      snapshotCanvas.toBlob(function(blob) {
-        let newImg = document.createElement('img'),
-          url = URL.createObjectURL(blob);
-          blobURL += url;
-          console.log(url)
-          let ref = firebase.storage().ref('fotos/');
-          ref.put(blob).then(function(snapshot) {
-            console.log('Uploaded a blob or file!');
-          });
+    snapshotCanvas.toBlob(function(blob) {
+      let newImg = document.createElement('img'),
+        url = URL.createObjectURL(blob);
+      blobURL += url;
+      console.log(url);
+      let ref = firebase.storage().ref('fotos/');
+      ref.put(blob).then(function(snapshot) {
+        console.log('Uploaded a blob or file!');
       });
     });
-  } 
-    navigator.mediaDevices.getUserMedia({video: true})
-      .then(handleSuccess)
+  });
+}; 
+navigator.mediaDevices.getUserMedia({video: true})
+  .then(handleSuccess);
       
 // Send Form
 btnSend.addEventListener('click', (ev) => {
@@ -116,13 +116,13 @@ const vue = new Vue({
 console.log(blobURL);
 
 // Get Data from Database
-db.collection("user").get().then(function(querySnapshot) {
+db.collection('user').get().then(function(querySnapshot) {
   querySnapshot.forEach(function(doc) {
-      // doc.data() is never undefined for query doc snapshots
-      //console.log(doc.id, " => ", doc.data());
-      console.log(doc.data().blob);
-       newImg = document.createElement('img');
-      newImg.src = doc.data().blob;
+    // doc.data() is never undefined for query doc snapshots
+    // console.log(doc.id, " => ", doc.data());
+    console.log(doc.data().blob);
+    newImg = document.createElement('img');
+    newImg.src = doc.data().blob;
     document.body.appendChild(newImg);
   });
 });

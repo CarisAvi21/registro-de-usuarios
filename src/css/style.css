@@ -13,3 +13,8 @@ input:valid {
 input:invalid {
     border-color: red;
 }
+
+h1{
+    text-align: center;
+}
+
