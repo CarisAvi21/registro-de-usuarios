@@ -9,19 +9,19 @@ var config = {
 };
 firebase.initializeApp(config);
 
-btnSend.addEventListener('submit', (ev) => {
+btnSend.addEventListener('click', (ev) => {
+  event.preventDefault(ev);
   let userNameValue = userName.value;
   let userLastNameValue = userLastName.value;
   let userEmailValue = userEmail.value;
   let userNumberValue = userNumber.value;
 
-  if (userEmail.validity.typeMismatch) {
-    userEmail.setCustomValidity('Ingresa un email valido');
+  if(userNameValue === '' || userLastNameValue === '' || userEmailValue === '' || userNumberValue === '') {
+    alert('completa todos los campos');
     event.preventDefault(ev);
     window.history.back();
-  } else {
-    userEmail.setCustomValidity('');
   }
+
   let db = firebase.firestore();
   let dbRef = db.collection('user').add({
     name: userNameValue,
