@@ -16,22 +16,20 @@ btnSend.addEventListener('click', (ev) => {
   let userEmailValue = userEmail.value;
   let userNumberValue = userNumber.value;
 
-  if(userNameValue === '' || userLastNameValue === '' || userEmailValue === '' || userNumberValue === '') {
-    alert('completa todos los campos');
-    event.preventDefault(ev);
-    window.history.back();
+  if (form.checkValidity() === true) {
+    let db = firebase.firestore();
+    let dbRef = db.collection('user').add({
+      name: userNameValue,
+      last_name: userLastNameValue,
+      email: userEmailValue,
+      number: userNumberValue,
+    }).then(function(docRef) {
+      console.log('Document written with ID: ', docRef.id);
+    })
+      .catch(function(error) {
+        console.error('Error adding document: ', error);
+      });
+  } else {
+form.reportValidity();
   }
-
-  let db = firebase.firestore();
-  let dbRef = db.collection('user').add({
-    name: userNameValue,
-    last_name: userLastNameValue,
-    email: userEmailValue,
-    number: userNumberValue,
-  }).then(function(docRef) {
-    console.log('Document written with ID: ', docRef.id);
-  })
-    .catch(function(error) {
-      console.error('Error adding document: ', error);
-    });
 });

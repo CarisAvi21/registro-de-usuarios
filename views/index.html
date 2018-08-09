@@ -15,16 +15,16 @@
         <label for="user-last-name">Ingresa tus apellidos</label>
         <input type="text" placeholder="Apellidos" id="user-last-name" required minlength="3" maxlength="20" autocomplete="last-name">
         <laberl for="user-email">Ingresa tu e-mail</laberl>
-        <input type="email" placeholder="Email" id="user-email" autocomplete="email">
+        <input type="email" placeholder="Email" id="user-email" required autocomplete="email">
         <label for="user-number">Ingresa tu número celular (10 digitos)</label>
-        <input type="number" placeholder="Celular" id="user-number" minlength="10" maxlength="10" autocomplete="number">
+        <input type="number" placeholder="Celular" id="user-number" required maxlength="10" autocomplete="number">
         <label for="user-reason">Motivo de Visita</label>
         <select>
           <option>Personal</option>
           <option>Reunión</option>
           <option>Entrevista</option>
         </select>
-        <button type="submit" name="send" id="btn-send">Enviar</button>
+        <input type="submit" value="Enviar" id="btn-send">
       </form>
     </main>
 
