@@ -1,5 +1,5 @@
 // Initialize Firebase
-var config = {
+let config = {
   apiKey: 'AIzaSyAdd49IO1IpLA7KU2VcZithm89dPb_YxlU',
   authDomain: 'registrousuarios-1c6e3.firebaseapp.com',
   databaseURL: 'https://registrousuarios-1c6e3.firebaseio.com',
@@ -7,8 +7,49 @@ var config = {
   storageBucket: 'registrousuarios-1c6e3.appspot.com',
   messagingSenderId: '615254550849'
 };
-firebase.initializeApp(config);
 
+firebase.initializeApp(config);
+let db = firebase.firestore();
+let storage = firebase.storage();
+let blobURL = '';
+    // WebCamera Functionality 
+    let handleSuccess = function(stream) {
+      // Attach the video stream to the video element and autoplay.
+      player.srcObject = stream;
+      videoTracks = stream.getVideoTracks();
+    
+    captureButton.addEventListener('click', function() {
+      let context = snapshot.getContext('2d');
+      // Draw the video frame to the canvas.
+      context.drawImage(player, 0, 0, snapshotCanvas.width, 
+        snapshotCanvas.height);
+      videoTracks.forEach(function(track) {
+    track.stop();
+    });
+
+    // console.log(context.createImageData());
+    //   const finalBlob = snapshotCanvas.toBlob(function(blob) {
+    //     return blob;
+    //   });
+    //   console.log("Final blob:", finalBlob);
+    // });
+
+      snapshotCanvas.toBlob(function(blob) {
+        let newImg = document.createElement('img'),
+          url = URL.createObjectURL(blob);
+          blobURL += url;
+          console.log(url)
+          let ref = firebase.storage().ref('fotos/');
+          ref.put(blob).then(function(snapshot) {
+            console.log('Uploaded a blob or file!');
+          });
+      });
+    });
+  } 
+    navigator.mediaDevices.getUserMedia({video: true})
+      .then(handleSuccess)
+      
+// Send Form
 btnSend.addEventListener('click', (ev) => {
   event.preventDefault(ev);
   let userNameValue = userName.value;
@@ -16,20 +57,25 @@ btnSend.addEventListener('click', (ev) => {
   let userEmailValue = userEmail.value;
   let userNumberValue = userNumber.value;
 
-  let db = firebase.firestore();
-  let dbRef = db.collection('user').add({
-    name: userNameValue,
-    last_name: userLastNameValue,
-    email: userEmailValue,
-    number: userNumberValue
-  }).then(function(docRef) {
-    console.log('Document written with ID: ', docRef.id);
-  })
-    .catch(function(error) {
-      console.error('Error adding document: ', error);
-    });
+  if (form.checkValidity() === true) {
+    let dbRef = db.collection('user').add({
+      name: userNameValue,
+      last_name: userLastNameValue,
+      email: userEmailValue,
+      number: userNumberValue,
+      blob: blobURL
+    }).then(function(docRef) {
+      console.log('Document written with ID: ', docRef.id);
+    })
+      .catch(function(error) {
+        console.error('Error adding document: ', error);
+      });
+  } else {
+    form.reportValidity();
+  }
 });
 
+// envió de notificación de correo
 
 (function() {
   emailjs.init('<YOUR USER ID>');
@@ -66,3 +112,18 @@ const vue = new Vue({
     }
   }
 });
+
+console.log(blobURL);
+
+// Get Data from Database
+db.collection("user").get().then(function(querySnapshot) {
+  querySnapshot.forEach(function(doc) {
+      // doc.data() is never undefined for query doc snapshots
+      //console.log(doc.id, " => ", doc.data());
+      console.log(doc.data().blob);
+       newImg = document.createElement('img');
+      newImg.src = doc.data().blob;
+    document.body.appendChild(newImg);
+  });
+});
+
