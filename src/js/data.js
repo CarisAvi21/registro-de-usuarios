@@ -1,5 +1,5 @@
 // Initialize Firebase
-var config = {
+let config = {
   apiKey: 'AIzaSyAdd49IO1IpLA7KU2VcZithm89dPb_YxlU',
   authDomain: 'registrousuarios-1c6e3.firebaseapp.com',
   databaseURL: 'https://registrousuarios-1c6e3.firebaseio.com',
@@ -26,20 +26,28 @@ let blobURL = '';
       videoTracks.forEach(function(track) {
     track.stop();
     });
+
+    // console.log(context.createImageData());
+    //   const finalBlob = snapshotCanvas.toBlob(function(blob) {
+    //     return blob;
+    //   });
+    //   console.log("Final blob:", finalBlob);
+    // });
+
       snapshotCanvas.toBlob(function(blob) {
         let newImg = document.createElement('img'),
           url = URL.createObjectURL(blob);
           blobURL += url;
-          console.log(blobURL); 
-        newImg.onload = function() {
-          // no longer need to read the blob so it's revoked
-          URL.revokeObjectURL(url);
-        };
+          console.log(url)
+          let ref = firebase.storage().ref('fotos/');
+          ref.put(blob).then(function(snapshot) {
+            console.log('Uploaded a blob or file!');
+          });
       });
     });
   } 
     navigator.mediaDevices.getUserMedia({video: true})
-      .then(handleSuccess); 
+      .then(handleSuccess)
       
 // Send Form
 btnSend.addEventListener('click', (ev) => {
@@ -67,6 +75,7 @@ btnSend.addEventListener('click', (ev) => {
   }
 });
 
+console.log(blobURL);
 
 // Get Data from Database
 db.collection("user").get().then(function(querySnapshot) {
