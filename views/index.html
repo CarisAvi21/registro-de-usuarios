@@ -4,15 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="../src/css/style.css" rel="stylesheet">
   <title>Registrar Visita</title>
 </head>
 <body>
     <main>
       <form>
-        <input type="text" placeholder="Nombre" id="user-name">
-        <input type="text" placeholder="Apellidos" id="user-last-name">
-        <input type="email" placeholder="Email" id="user-email">
-        <input type="number" placeholder="Celular" id="user-number">
+        <label for="user-name">Ingresa tu nombre</label>
+        <input type="text" placeholder="Nombre" id="user-name" required minlength="3" maxlength="20" autocomplete="name">
+        <label for="user-last-name">Ingresa tus apellidos</label>
+        <input type="text" placeholder="Apellidos" id="user-last-name" required minlength="3" maxlength="20" autocomplete="last-name">
+        <laberl for="user-email">Ingresa tu e-mail</laberl>
+        <input type="email" placeholder="Email" id="user-email" autocomplete="email">
+        <label for="user-number">Ingresa tu número celular (10 digitos)</label>
+        <input type="number" placeholder="Celular" id="user-number" minlength="10" maxlength="10" autocomplete="number">
+        <label for="user-reason">Motivo de Visita</label>
+        <select>
+          <option>Personal</option>
+          <option>Reunión</option>
+          <option>Entrevista</option>
+        </select>
         <button type="submit" name="send" id="btn-send">Enviar</button>
       </form>
     </main>
