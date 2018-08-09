@@ -16,16 +16,20 @@ btnSend.addEventListener('click', (ev) => {
   let userEmailValue = userEmail.value;
   let userNumberValue = userNumber.value;
 
-  let db = firebase.firestore();
-  let dbRef = db.collection('user').add({
-    name: userNameValue,
-    last_name: userLastNameValue,
-    email: userEmailValue,
-    number: userNumberValue
-  }).then(function(docRef) {
-    console.log('Document written with ID: ', docRef.id);
-  })
-    .catch(function(error) {
-      console.error('Error adding document: ', error);
-    });
+  if (form.checkValidity() === true) {
+    let db = firebase.firestore();
+    let dbRef = db.collection('user').add({
+      name: userNameValue,
+      last_name: userLastNameValue,
+      email: userEmailValue,
+      number: userNumberValue,
+    }).then(function(docRef) {
+      console.log('Document written with ID: ', docRef.id);
+    })
+      .catch(function(error) {
+        console.error('Error adding document: ', error);
+      });
+  } else {
+form.reportValidity();
+  }
 });
