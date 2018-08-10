@@ -25,12 +25,6 @@
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="inputGroup-sizing-default">Ingresa tus apellidos</span>
-            </div>
-            <input type="text" class="form-control" id="user-last-name"v-model="from_last_name" required minlength="3" maxlength="20" autocomplete="last-name"aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          </div>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-default">Ingresa tu e-mail</span>
             </div>
             <input type="text" class="form-control" id="user-email" v-model= "from_email" required autocomplete="email" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-default">
@@ -85,28 +79,17 @@
                     <option value="26">BACKYARD</option>
                   </select>
                   </div>
-              <!--label for="user-name">Ingresa tu nombre</label>
-              <input type="text" placeholder="Nombre" id="user-name" required minlength="3" maxlength="20" autocomplete="name">
-              <label for="user-last-name">Ingresa tus apellidos</label>
-              <input type="text" placeholder="Apellidos" id="user-last-name" required minlength="3" maxlength="20" autocomplete="last-name">
-              <laberl for="user-email">Ingresa tu e-mail</laberl>
-              <input type="email" placeholder="Email" id="user-email" required autocomplete="email">
-              <label for="user-number">Ingresa tu número celular (10 digitos)</label>
-              <input type="number" placeholder="Celular" id="user-number" required maxlength="10" autocomplete="number">
-              <label for="user-reason">Motivo de Visita</label>
-              <select>
-                <option>Personal</option>
-                <option>Reunión</option>
-                <option>Entrevista</option>
-              </select-->
+            <section>
+                <video id="player" width="320" heigth="250" controls autoplay></video>
+                <canvas id="snapshot" width="320" height="240"></canvas>
+                <button id="capture" class="btn btn-secondary btn-lg btn-block" class="btnCap">Capturar</button>
+              </section>
+<<<<<<< HEAD
+
+=======
               <input type="submit" value="Enviar" class="btn btn-secondary btn-lg btn-block" id="btn-send">
             </form><br>
-            <section>
-                <video id="player" controls autoplay></video>
-                <button id="capture" class="btn btn-secondary btn-lg btn-block" class="btnCap">Capturar</button>
-                <canvas id="snapshot" width="320" height="240"></canvas>
-              </section>
-
+>>>>>>> upstream/master
             </main>
             </div>
           <div class="card-footer text-muted">
