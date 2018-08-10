@@ -27,13 +27,6 @@ let handleSuccess = function(stream) {
       track.stop();
     });
 
-    // console.log(context.createImageData());
-    //   const finalBlob = snapshotCanvas.toBlob(function(blob) {
-    //     return blob;
-    //   });
-    //   console.log("Final blob:", finalBlob);
-    // });
-
     snapshotCanvas.toBlob(function(blob) {
       let newImg = document.createElement('img'),
         url = URL.createObjectURL(blob);
@@ -53,14 +46,12 @@ navigator.mediaDevices.getUserMedia({video: true})
 btnSend.addEventListener('click', (ev) => {
   event.preventDefault(ev);
   let userNameValue = userName.value;
-  let userLastNameValue = userLastName.value;
   let userEmailValue = userEmail.value;
   let userNumberValue = userNumber.value;
 
   if (form.checkValidity() === true) {
     let dbRef = db.collection('user').add({
       name: userNameValue,
-      last_name: userLastNameValue,
       email: userEmailValue,
       number: userNumberValue,
       blob: blobURL
@@ -75,8 +66,8 @@ btnSend.addEventListener('click', (ev) => {
   }
 });
 
-// envió de notificación de correo
 
+// envió de notificación de correo
 (function() {
   emailjs.init('<YOUR USER ID>');
 })();
@@ -113,7 +104,6 @@ const vue = new Vue({
   }
 });
 
-console.log(blobURL);
 
 // Get Data from Database
 db.collection('user').get().then(function(querySnapshot) {
@@ -123,7 +113,7 @@ db.collection('user').get().then(function(querySnapshot) {
     console.log(doc.data().blob);
     newImg = document.createElement('img');
     newImg.src = doc.data().blob;
-    document.body.appendChild(newImg);
+    //document.body.appendChild(newImg);
   });
 });
 
