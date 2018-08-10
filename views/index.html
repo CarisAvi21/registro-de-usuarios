@@ -99,15 +99,18 @@
                 <option>Reunión</option>
                 <option>Entrevista</option>
               </select-->
-              <input type="submit" value="Enviar" class="btn btn-secondary" id="btn-send">
-            </form>
+              <input type="submit" value="Enviar" class="btn btn-secondary btn-lg btn-block" id="btn-send">
+            </form><br>
             <section>
                 <video id="player" controls autoplay></video>
-                <button id="capture">Capturar</button>
+                <button id="capture" class="btn btn-secondary btn-lg btn-block" class="btnCap">Capturar</button>
                 <canvas id="snapshot" width="320" height="240"></canvas>
               </section>
             </main>
-          </div>
+            </div>
+          <div class="card-footer text-muted">
+    Terminal 1
+  </div>
   
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
