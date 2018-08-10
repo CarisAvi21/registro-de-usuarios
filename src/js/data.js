@@ -127,3 +127,12 @@ db.collection('user').get().then(function(querySnapshot) {
   });
 });
 
+// Obteniendo Info del JSON
+window.onload = () => {
+  fetch('../data/trabajadores.json')
+    .then(response => response.json()).then((data) => {
+      listeners(data);
+    });
+};
+
+
