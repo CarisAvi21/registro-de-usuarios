@@ -48,6 +48,7 @@ btnSend.addEventListener('click', (ev) => {
   let userNameValue = userName.value;
   let userEmailValue = userEmail.value;
   let userNumberValue = userNumber.value;
+  
 
   if (form.checkValidity() === true) {
     let dbRef = db.collection('user').add({
@@ -66,34 +67,48 @@ btnSend.addEventListener('click', (ev) => {
   }
 });
 
+// Get Data from Database
+db.collection('user').get().then(function(querySnapshot) {
+  querySnapshot.forEach(function(doc) {
+    // doc.data() is never undefined for query doc snapshots
+    // console.log(doc.id, " => ", doc.data());
+    // console.log(doc.data().blob);
+    newImg = document.createElement('img');
+    newImg.src = doc.data().blob;
+    // document.body.appendChild(newImg);
+  });
+});
 
-// envió de notificación de correo
+// Obteniendo Info del JSON
+window.onload = () => {
+  fetch('../data/trabajadores.json')
+    .then(response => response.json()).then((data) => {
+      listeners(data);
+    });
+};
+
+
+// función para el envio de notificación por email
+
 (function() {
   emailjs.init('user_tQKEqfp1RDoxkEfhRcUTw');
 })();
+
 const vue = new Vue({
   el: '#app',
   data() {
     return {
       from_name: '',
-      from_last_name: '',
       from_email: '',
-      from_number: '',
-      // from_empresa: '',
-      // from_direccion: '',
     };
   },
   methods: {
     enviar() {
       let data = {
         from_name: this.from_name,
-        from_last_name: this.from_last_name,
         from_email: this.from_email,
-        from_number: this.from_number,
-        // from_empresa: this.from_empresa,
-        // from_direccion: this.from_direccion,
       };
-          
+
       emailjs.send('gmail', 'notificaci_n_de_visita', data)
         .then(function(response) {
           if (response.text === 'OK') {
@@ -107,27 +122,6 @@ const vue = new Vue({
     }
   }
 });
-console.log(vue);
 
-
-// Get Data from Database
-db.collection('user').get().then(function(querySnapshot) {
-  querySnapshot.forEach(function(doc) {
-    // doc.data() is never undefined for query doc snapshots
-    // console.log(doc.id, " => ", doc.data());
-    // console.log(doc.data().blob);
-    newImg = document.createElement('img');
-    newImg.src = doc.data().blob;
-    //document.body.appendChild(newImg);
-  });
-});
-
-// Obteniendo Info del JSON
-window.onload = () => {
-  fetch('../data/trabajadores.json')
-    .then(response => response.json()).then((data) => {
-      listeners(data);
-    });
-};
-
-
+// console.log(vue)
+vue.enviar();

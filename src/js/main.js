@@ -10,6 +10,7 @@ const captureButton = document.getElementById('capture');
 let videoTracks;
 let userVisit = document.getElementById('user-visit');
 
+
 const home = () => {
   window.location.assign('views/index.html');
 };
