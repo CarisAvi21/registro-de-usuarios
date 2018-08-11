@@ -25,12 +25,6 @@
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="inputGroup-sizing-default">Ingresa tus apellidos</span>
-            </div>
-            <input type="text" class="form-control" id="user-last-name" required minlength="3" maxlength="20" autocomplete="last-name"aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          </div>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-default">Ingresa tu e-mail</span>
             </div>
             <input type="text" class="form-control" id="user-email" required autocomplete="email" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-default">
@@ -44,8 +38,8 @@
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">Motivo de la visita</label>
               </div>
-              <select class="custom-select" id="inputGroupSelect01">
-                <option selected>Choose...</option>
+              <select class="custom-select" id="user-reason" id="inputGroupSelect01">
+                <option selected>Selecciona una opción...</option>
                 <option value="1">Personal</option>
                 <option value="2">Reunión</option>
                 <option value="3">Entrevista</option>
@@ -55,36 +49,48 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Empresa que visita</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Laboratoria</option>
-                    <option value="2">Upscool</option>
-                    <option value="3">Prueba</option>
+                  <select class="custom-select" id="user-visit" id="inputGroupSelect01">
+                    <option selected>Selecciona una opción...</option>
+                    <option value="1">BAF CONSULTING</option>
+                    <option value="2">CORREDURÍA 35</option>
+                    <option value="3">CULTURA DH</option>
+                    <option value="4">GALLO DESIGN</option>
+                    <option value="5">GRAHAM ABOGADOS</option>
+                    <option value="6">MINDWAY</option>
+                    <option value="7">IN STYLE</option>
+                    <option value="8">LEGION BRAND</option>
+                    <option value="9">MANAGERS ANONIMOS</option>
+                    <option value="10">MERCARTE</option>
+                    <option value="11">MESSEBAU</option>
+                    <option value="12">PEREZ REYES Y ASOCIADOS</option>
+                    <option value="13">PIXI</option>
+                    <option value="14">RABBIT HOUSE</option>
+                    <option value="15">SVX</option>
+                    <option value="16">TRES AMERICAS</option>
+                    <option value="17">TIERRA CAPITAL</option>
+                    <option value="18">TRIPLE JUMPS</option>
+                    <option value="19">UPSOCL</option>
+                    <option value="20">VIA DIRECT</option>
+                    <option value="21">YOUR PAY CHOICE</option>
+                    <option value="22">ZOOMIN TV</option>
+                    <option value="23">CIC MEDIA</option>
+                    <option value="24">MEDICONECTA</option>
+                    <option value="25">LABORATORIA</option>
+                    <option value="26">BACKYARD</option>
                   </select>
                   </div>
-              <!--label for="user-name">Ingresa tu nombre</label>
-              <input type="text" placeholder="Nombre" id="user-name" required minlength="3" maxlength="20" autocomplete="name">
-              <label for="user-last-name">Ingresa tus apellidos</label>
-              <input type="text" placeholder="Apellidos" id="user-last-name" required minlength="3" maxlength="20" autocomplete="last-name">
-              <laberl for="user-email">Ingresa tu e-mail</laberl>
-              <input type="email" placeholder="Email" id="user-email" required autocomplete="email">
-              <label for="user-number">Ingresa tu número celular (10 digitos)</label>
-              <input type="number" placeholder="Celular" id="user-number" required maxlength="10" autocomplete="number">
-              <label for="user-reason">Motivo de Visita</label>
-              <select>
-                <option>Personal</option>
-                <option>Reunión</option>
-                <option>Entrevista</option>
-              </select-->
-              <input type="submit" value="Enviar" class="btn btn-secondary" id="btn-send">
-            </form>
             <section>
-                <video id="player" controls autoplay></video>
-                <button id="capture">Capturar</button>
+                <video id="player" width="320" heigth="250" controls autoplay></video>
                 <canvas id="snapshot" width="320" height="240"></canvas>
+                <button id="capture" class="btn btn-secondary btn-lg btn-block" class="btnCap">Capturar</button>
               </section>
+              <input type="submit" value="Enviar" class="btn btn-secondary btn-lg btn-block" id="btn-send">
+            </form><br>
             </main>
-          </div>
+            </div>
+          <div class="card-footer text-muted">
+    Terminal 1
+  </div>
   
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
