@@ -14,7 +14,7 @@ firebase.initializeApp(config);
 
 let db = firebase.firestore();
 
-db.collection('user').onSnapshot((querySnapshot) => {
+db.collection('user').orderBy('date', 'desc').onSnapshot((querySnapshot) => {
   querySnapshot.forEach(function(doc) {
     let data = doc.data();
     tableBody.innerHTML += `<tr>
@@ -24,6 +24,4 @@ db.collection('user').onSnapshot((querySnapshot) => {
       <td>${data.date}</td>
     </tr>`;
   });
-}).catch(function(error) {
-  console.log('Error getting documents: ', error);
 });
