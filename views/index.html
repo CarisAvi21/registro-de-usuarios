@@ -22,100 +22,64 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-default">Ingresa tu nombre</span>
           </div>
-          <input type="text" class="form-control" id="user-name" required minlength="3" maxlength="40" autocomplete="name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-default">Ingresa tu e-mail</span>
-          </div>
-          <input type="text" class="form-control" id="user-email" required autocomplete="email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <label class="input-group-text" for="inputGroupSelect01">Motivo de la visita</label>
-          </div>
-          <select class="custom-select" id="user-reason inputGroupSelect01">
-            <option selected>Selecciona una opción...</option>
-            <option value="1">Personal</option>
-            <option value="2">Reunión</option>
-            <option value="3">Entrevista</option>
-          </select>
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <label class="input-group-text" for="inputGroupSelect01">Empresa que visita</label>
-          </div>
-          <select class="custom-select" id="user-visit inputGroupSelect01">
-            <option selected>Selecciona una opción...</option>
-            <option value="1">BAF CONSULTING</option>
-            <option value="2">CORREDURÍA 35</option>
-            <option value="3">CULTURA DH</option>
-            <option value="4">GALLO DESIGN</option>
-            <option value="5">GRAHAM ABOGADOS</option>
-            <option value="6">MINDWAY</option>
-            <option value="7">IN STYLE</option>
-            <option value="8">LEGION BRAND</option>
-            <option value="9">MANAGERS ANONIMOS</option>
-            <option value="10">MERCARTE</option>
-            <option value="11">MESSEBAU</option>
-            <option value="12">PEREZ REYES Y ASOCIADOS</option>
-            <option value="13">PIXI</option>
-            <option value="14">RABBIT HOUSE</option>
-            <option value="15">SVX</option>
-            <option value="16">TRES AMERICAS</option>
-            <option value="17">TIERRA CAPITAL</option>
-            <option value="18">TRIPLE JUMPS</option>
-            <option value="19">UPSOCL</option>
-            <option value="20">VIA DIRECT</option>
-            <option value="21">YOUR PAY CHOICE</option>
-            <option value="22">ZOOMIN TV</option>
-            <option value="23">CIC MEDIA</option>
-            <option value="24">MEDICONECTA</option>
-            <option value="25">LABORATORIA</option>
-            <option value="26">BACKYARD</option>
-          </select>
-        </div>
-        <input type="submit" value="Continuar" class="btn btn-secondary btn-lg btn-block" id="btn-continue-to-camera">
-      </form>
-    </main>
-    <!-- Camera Section -->
-    <section id = "camera">
-      <header class="logo">T1</header>
-      <p class="explanation-camera">A continuación deberás tomarte una foto para continuar con el registro</p>
-      <video id="player" width="320" heigth="250" controls autoplay></video>
-      <canvas id="snapshot" width="320" height="240"></canvas>
-      <button id="capture" class="col col-lg-3 btn btn-outline-secondary">Capturar</button>
-    </section>
-    
-    <section id="end-view">
-      <input type="submit" value="Enviar" class="col col-lg-5 center btn btn-primary btn-lg btn-block" id="btn-send" data-toggle="modal" data-target="#exampleModalCenter">
-    </section>
-    
-    <!-- Button trigger modal -->
-    <!--button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-      Launch demo modal
-    </button-->
-    <!-- Modal -->
-    <div class="modal fade" id="btn-send" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Gracias por registrarte</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>En un momento recepción te dara información.</p>
-            <p>¡Por favor espera!</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Aceptar</button>
-          </div>
-        </div>
-      </div>
-    </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Motivo de la visita</label>
+              </div>
+              <select class="custom-select" id="user-reason inputGroupSelect01">
+                <option selected>Selecciona una opción...</option>
+                <option value="1">Personal</option>
+                <option value="2">Reunión</option>
+                <option value="3">Entrevista</option>
+              </select>
+              </div>
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Empresa que visita</label>
+                  </div>
+                  <select class="custom-select" id="user-visit inputGroupSelect01">
+                    <option selected>Selecciona una opción...</option>
+                    <option value="1">BAF CONSULTING</option>
+                    <option value="2">CORREDURÍA 35</option>
+                    <option value="3">CULTURA DH</option>
+                    <option value="4">GALLO DESIGN</option>
+                    <option value="5">GRAHAM ABOGADOS</option>
+                    <option value="6">MINDWAY</option>
+                    <option value="7">IN STYLE</option>
+                    <option value="8">LEGION BRAND</option>
+                    <option value="9">MANAGERS ANONIMOS</option>
+                    <option value="10">MERCARTE</option>
+                    <option value="11">MESSEBAU</option>
+                    <option value="12">PEREZ REYES Y ASOCIADOS</option>
+                    <option value="13">PIXI</option>
+                    <option value="14">RABBIT HOUSE</option>
+                    <option value="15">SVX</option>
+                    <option value="16">TRES AMERICAS</option>
+                    <option value="17">TIERRA CAPITAL</option>
+                    <option value="18">TRIPLE JUMPS</option>
+                    <option value="19">UPSOCL</option>
+                    <option value="20">VIA DIRECT</option>
+                    <option value="21">YOUR PAY CHOICE</option>
+                    <option value="22">ZOOMIN TV</option>
+                    <option value="23">CIC MEDIA</option>
+                    <option value="24">MEDICONECTA</option>
+                    <option value="25">LABORATORIA</option>
+                    <option value="26">BACKYARD</option>
+                  </select>
+                  </div>
+
+                  <input type="submit" value="Continuar" class="btn btn-secondary btn-lg btn-block" id="btn-continue-to-camera">
+                </form>
+                </main>
+
+             <!-- Camera Section -->
+            <section id = "camera">
+              <header class="logo">T1</header>
+              <p class="explanation-camera">A continuación deberás tomarte una foto para continuar con el registro</p>
+              <video id="player" width="320" heigth="250" autoplay playsinline ></video>
+                <canvas id="snapshot" width="320" height="240"></canvas>
+                <button id="capture" class="col col-lg-3 btn btn-outline-secondary">Capturar</button>
+      </section>
   
   </div>
   <footer>

@@ -36,6 +36,9 @@ En este proyecto la empresa de coworking donde opera Laboratoria en tu ciudad "T
    * Conocen las historias de usuario y los puntos de contacto con el cliente.
 
 ## Especificaciones
+Datos para ingresar a la página de administrador :
+* Email: admin@terminal1.com
+* Password: welcomeadmin
 
 En éste proyecto se utiliza [Boostrap v4.1.3](https://getbootstrap.com/), [Firebase Cloud Firestore, Firebase Storage](https://firebase.google.com/) y [EmailJS](http://www.emailjs.com/).
 
