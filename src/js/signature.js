@@ -28,3 +28,22 @@ function levantaRaton(capturo) {
   ctx.closePath();
   estoyDibujando = false;
 }
+
+// convirtiendo el canvas a img 
+
+var png = document.getElementById('png');
+png.addEventListener('click', function() {	
+  // Exportar la imagen	  
+}, false);
+
+var img = document.getElementById('laimagen');
+
+ 
+var png = document.getElementById('png');
+png.addEventListener('click', function() {	
+  img.src = nuestroCanvas.toDataURL('image/png');	
+}, false);
+
+console.log(nuestroCanvas);
+
+
