@@ -124,7 +124,7 @@ btnSend.addEventListener('click', (ev) => {
   let date = new Date();
   let dbRef = db.collection('user').add({
     name: userNameValue.substring(9),
-    // blob: blobURL.substring(9),
+    blob: blobURL.substring(9),
     date: date
   }).then(function(docRef) {
     console.log('Document written with ID: ', docRef.id);
