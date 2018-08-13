@@ -9,7 +9,10 @@ const snapshotCanvas = document.getElementById('snapshot');
 const captureButton = document.getElementById('capture');
 let videoTracks;
 let userVisit = document.getElementById('user-visit');
-
+const main = document.getElementById('main');
+const camera = document.getElementById('camera');
+const continueToCamera = document.getElementById('btn-continue-to-camera');
+const endView = document.getElementById('end-view');
 
 const home = () => {
   window.location.assign('views/index.html');
