@@ -22,19 +22,19 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-default">Ingresa tu nombre</span>
             </div>
-            <input type="text" class="form-control" id="user-name" required minlength="3" maxlength="40" autocomplete="name" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-default">
+            <input type="text" class="form-control" id="user-name" required minlength="3" maxlength="40" autocomplete="name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-default">Ingresa tu e-mail</span>
             </div>
-            <input type="text" class="form-control" id="user-email" required autocomplete="email" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-default">
+            <input type="text" class="form-control" id="user-email" required autocomplete="email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           </div>
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">Motivo de la visita</label>
               </div>
-              <select class="custom-select" id="user-reason" id="inputGroupSelect01">
+              <select class="custom-select" id="user-reason inputGroupSelect01">
                 <option selected>Selecciona una opción...</option>
                 <option value="1">Personal</option>
                 <option value="2">Reunión</option>
@@ -45,7 +45,7 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Empresa que visita</label>
                   </div>
-                  <select class="custom-select" id="user-visit" id="inputGroupSelect01">
+                  <select class="custom-select" id="user-visit inputGroupSelect01">
                     <option selected>Selecciona una opción...</option>
                     <option value="1">BAF CONSULTING</option>
                     <option value="2">CORREDURÍA 35</option>
@@ -76,22 +76,22 @@
                   </select>
                   </div>
 
-                  <input type="submit"value="Enviar" class="btn btn-secondary btn-lg btn-block" id="btn-continue-to-camera">
-                </form><br>
+                  <input type="submit" value="Continuar" class="btn btn-secondary btn-lg btn-block" id="btn-continue-to-camera">
+                </form>
                 </main>
 
              <!-- Camera Section -->
-             <section id = "camera">
+            <section id = "camera">
+              <header class="logo">T1</header>
+              <p class="explanation-camera">A continuación deberás tomarte una foto para continuar con el registro</p>
                 <video id="player" width="320" heigth="250" controls autoplay></video>
                 <canvas id="snapshot" width="320" height="240"></canvas>
-                <button id="capture" class="btn btn-secondary btn-lg btn-block btnCap">Capturar</button>
+                <button id="capture" class="col col-lg-3 btn btn-outline-secondary">Capturar</button>
               </section>
-
+  
               <section id="end-view">
-                <button type="submit" value="Enviar" class="btn btn-primary btn-lg btn-block" id="btn-send" data-toggle="modal" data-target="#exampleModalCenter">
-                  Enviar
-                </button>
-              <!--input type="submit"value="Enviar" class="btn btn-secondary btn-lg btn-block" id="btn-send"-->
+
+              <input type="submit" value="Enviar" class="col col-lg-5 center btn btn-primary btn-lg btn-block" id="btn-send" data-toggle="modal" data-target="#exampleModalCenter">
               </section>
 
             <!-- Button trigger modal -->
@@ -121,14 +121,13 @@
                 </div>
               </div>
 
-
-
             </div>
-
+            <footer>
           <div class="card-footer text-muted">
     Terminal 1
   </div>
-  <!--JS Bootstrap-->
+</footer>
+<!--JS Bootstrap-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
   crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
