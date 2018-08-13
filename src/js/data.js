@@ -23,73 +23,73 @@ endView.style.display = 'none';
 continueToCamera.addEventListener('click', (ev) => {
   event.preventDefault(ev);
   if (form.checkValidity() === true) {
-  main.style.display = 'none';
-  camera.style.display = 'block';
-  endView.style.display = 'block';
-  // WebCamera Functionality
-  let handleSuccess = function(stream) {
+    main.style.display = 'none';
+    camera.style.display = 'block';
+    endView.style.display = 'block';
+    // WebCamera Functionality
+    let handleSuccess = function(stream) {
     // Attach the video stream to the video element and autoplay.
-    player.srcObject = stream;
-    videoTracks = stream.getVideoTracks();
+      player.srcObject = stream;
+      videoTracks = stream.getVideoTracks();
 
-    captureButton.addEventListener('click', function(ev) {
-      event.preventDefault(ev);
-      let context = snapshot.getContext('2d');
-      // Draw the video frame to the canvas.
-      context.drawImage(player, 0, 0, snapshotCanvas.width,
-        snapshotCanvas.height);
-      videoTracks.forEach(function(track) {
-        track.stop();
-      });
+      captureButton.addEventListener('click', function(ev) {
+        event.preventDefault(ev);
+        let context = snapshot.getContext('2d');
+        // Draw the video frame to the canvas.
+        context.drawImage(player, 0, 0, snapshotCanvas.width,
+          snapshotCanvas.height);
+        videoTracks.forEach(function(track) {
+          track.stop();
+        });
 
-      let blah = snapshotCanvas.toBlob(function(blob) {
-        let newImg = document.createElement('img'),
-          url = URL.createObjectURL(blob);
-        let name = Math.random().toString(36).substring(7);
-        let ref = firebase.storage().ref().child('fotos/' + name);
-        ref.put(blob).then(function(snapshot) {
-          console.log('Uploaded a blob or file!');
-          ref.getDownloadURL().then(function(url) {
-          // This can be downloaded directly:
-            var xhr = new XMLHttpRequest();
-            xhr.responseType = 'blob';
-            xhr.onload = function(event) {
-              var blob = xhr.response;
-            };
-            xhr.open('GET', url);
-            xhr.send();
-            blobURL += url;
-          }).catch(function(error) {
-            console.log(error.message);
+        let blah = snapshotCanvas.toBlob(function(blob) {
+          let newImg = document.createElement('img'),
+            url = URL.createObjectURL(blob);
+          let name = Math.random().toString(36).substring(7);
+          let ref = firebase.storage().ref().child('fotos/' + name);
+          ref.put(blob).then(function(snapshot) {
+            console.log('Uploaded a blob or file!');
+            ref.getDownloadURL().then(function(url) {
+              // This can be downloaded directly:
+              var xhr = new XMLHttpRequest();
+              xhr.responseType = 'blob';
+              xhr.onload = function(event) {
+                var blob = xhr.response;
+              };
+              xhr.open('GET', url);
+              xhr.send();
+              blobURL += url;
+            }).catch(function(error) {
+              console.log(error.message);
+            });
           });
         });
       });
-    });
-  };
-  navigator.mediaDevices.getUserMedia({video: true})
-    .then(handleSuccess);
-  userNameValue += userName.value;
-  userEmailValue += userEmail.value;
-} else {
-  form.reportValidity();
-}
+    };
+    navigator.mediaDevices.getUserMedia({video: true})
+      .then(handleSuccess);
+    userNameValue += userName.value;
+    userEmailValue += userEmail.value;
+  } else {
+    form.reportValidity();
+  }
 });
 
 // Send Form
 btnSend.addEventListener('click', (ev) => {
   event.preventDefault(ev);
   let date = new Date();
-    let dbRef = db.collection('user').add({
-      name: userNameValue.substring(9),
-      email: userEmailValue.substring(9),
-      blob: blobURL.substring(9),
-      date: date
-    }).then(function(docRef) {
-      console.log('Document written with ID: ', docRef.id);
-    })
-      .catch(function(error) {
-        console.error('Error adding document: ', error);
-      });
+  let dbRef = db.collection('user').add({
+    name: userNameValue.substring(9),
+    email: userEmailValue.substring(9),
+    blob: blobURL.substring(9),
+    date: date
+  }).then(function(docRef) {
+    console.log('Document written with ID: ', docRef.id);
+  })
+    .catch(function(error) {
+      console.error('Error adding document: ', error);
+    });
   // función para el envio de notificación por email
   (function() {
     emailjs.init('user_tQKEqfp1RDoxkEfhRcUTw');
@@ -129,10 +129,12 @@ btnSend.addEventListener('click', (ev) => {
 
 /*
 // Obteniendo Info del JSON
+
 window.onload = () => {
-  fetch('../data/trabajadores.json')
-    .then(response => response.json()).then((data) => {
-      listeners(data);
-    });
+  fetch(url).then(function(datos) {
+    return datos.json();
+  }).then(function(data) {
+
+  });
 };
 */
