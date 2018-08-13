@@ -13,15 +13,16 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
+
   <div class="container">
-      <main>
+      <main id="main">
         <h1>Bienvenido</h1>
         <form>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-default">Ingresa tu nombre</span>
             </div>
-            <input type="text" class="form-control" id="user-name" required minlength="3" maxlength="20" autocomplete="name" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-default">
+            <input type="text" class="form-control" id="user-name" required minlength="3" maxlength="40" autocomplete="name" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-default">
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -74,26 +75,25 @@
                     <option value="26">BACKYARD</option>
                   </select>
                   </div>
-            <section>
+
+                  <input type="submit"value="Enviar" class="btn btn-secondary btn-lg btn-block" id="btn-continue-to-camera">
+                </form><br>
+                </main>
+
+             <!-- Camera Section -->
+            <section id = "camera">
                 <video id="player" width="320" heigth="250" controls autoplay></video>
                 <canvas id="snapshot" width="320" height="240"></canvas>
-                <button id="capture" class="btn btn-outline-secondary">Capturar</button>
+                <button id="capture" class="btn btn-secondary btn-lg btn-block btnCap">Capturar</button>
               </section>
+
+              <section id="end-view">
               <input type="submit"value="Enviar" class="btn btn-secondary btn-lg btn-block" id="btn-send">
-            </form><br>
-            </main>
+              </section>
             </div>
           <div class="card-footer text-muted">
     Terminal 1
   </div>
-<!--Bootstrap JS-->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-  crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-  crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-  crossorigin="anonymous"></script>
-  
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
