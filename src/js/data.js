@@ -76,11 +76,13 @@ continueToCamera.addEventListener('click', (ev) => {
 // Send Form
 btnSend.addEventListener('click', (ev) => {
   event.preventDefault(ev);
+  let date = new Date();
   if (form.checkValidity() === true) {
     let dbRef = db.collection('user').add({
       name: userNameValue.substring(9),
       email: userEmailValue.substring(9),
-      blob: blobURL.substring(9)
+      blob: blobURL.substring(9),
+      date: date
     }).then(function(docRef) {
       console.log('Document written with ID: ', docRef.id);
     })
