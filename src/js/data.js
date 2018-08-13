@@ -19,6 +19,40 @@ let photoURL;
 camera.style.display = 'none';
 endView.style.display = 'none';
 
+// Mail notification 
+(function() {
+  emailjs.init('user_tQKEqfp1RDoxkEfhRcUTw');
+})();
+
+const vue = new Vue({
+  el: '#app',
+  data() {
+    return {
+      from_name: '',
+      from_email: '',
+    };
+  },
+  methods: {
+    enviar() {
+      let data = {
+        from_name: this.from_name,
+        from_email: this.from_email,
+      };
+
+      emailjs.send('gmail', 'notificaci_n_de_visita', data)
+        .then(function(response) {
+          if (response.text === 'OK') {
+            alert('El correo se ha enviado de forma exitosa');
+          }
+        // console.log('SUCCESS. status=%d, text=%s', response.status, response.text);
+        }, function(err) {
+          alert('Ocurrió un problema al enviar el correo');
+        // console.log('FAILED. error=', err);
+        });
+    }
+  }
+});
+
 // Continue from form to camera
 continueToCamera.addEventListener('click', (ev) => {
   event.preventDefault(ev);
@@ -86,45 +120,11 @@ btnSend.addEventListener('click', (ev) => {
     date: date
   }).then(function(docRef) {
     console.log('Document written with ID: ', docRef.id);
+    vue.enviar();
   })
     .catch(function(error) {
       console.error('Error adding document: ', error);
     });
-  // función para el envio de notificación por email
-  (function() {
-    emailjs.init('user_tQKEqfp1RDoxkEfhRcUTw');
-  })();
-
-  const vue = new Vue({
-    el: '#app',
-    data() {
-      return {
-        from_name: '',
-        from_email: '',
-      };
-    },
-    methods: {
-      enviar() {
-        let data = {
-          from_name: this.from_name,
-          from_email: this.from_email,
-        };
-
-        emailjs.send('gmail', 'notificaci_n_de_visita', data)
-          .then(function(response) {
-            if (response.text === 'OK') {
-              alert('El correo se ha enviado de forma exitosa');
-            }
-          // console.log('SUCCESS. status=%d, text=%s', response.status, response.text);
-          }, function(err) {
-            alert('Ocurrió un problema al enviar el correo');
-          // console.log('FAILED. error=', err);
-          });
-      }
-    }
-  });
-  // console.log(vue)
-  vue.enviar();
 });
 
 /*
