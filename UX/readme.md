@@ -128,10 +128,28 @@ Síntesis y definición
 Ideación
 
 De acuerdo a la investigación realizada nos encontramos con la ambiguedad de los datos que son solicitados al tratar de acceder o rentar un espacio de Cowork, por lo que se piensa en diseñar una plataforma que asegure que los datos solicitados sean claros y resguardados en un sólo lugar. Facilitando procesos como registro para el visitante mediante una tablet, recepción visualiza la información al momento para poder notificar al Coworker de la persona que está esperando. 
+## Benchmark (externo)
+## Principales competidores
+## Target, argumentación del proyecto (negocio y usuario)
 
+
+## Historias de Usuario
+
+* Adminstrador 
+Yo como administrador de un Coworking necesito saber cuantas oficinas tengo ocupadas y por cuanto tiempo fueron contratadas, cuantas personas están trabajando y ocupando mis espacios para determinar si debo de agregar gastor por uso de estos (baños, comedor, salas de juntas, estacionamientos, recepción por cuestiones de paquetería, etc.). Quiero saber el flujo de personas que entran y los principales motivos ya que pueden surgir clientes potenciales o en caso de robo, siniestros o algún tipo de emergencia deb de tener un registro de las personas que se encontraban en el edificio. 
+
+* Coworker
+Yo como arrendador de un espacio de Coworking debo de estar al pendiente de cuando expira mi contrato pero a veces por otras distracciones me olvido de estos temas así que me gustaría que hubiese un tipo de recordatorio, me agrada que varias empresas se reunan para laborar en un mismo lugar pero creo que la seguridad que hay en el edificio no es suficiente, he notado que sólo basta con que se anoten en una libreta pueden ingresar, sin ser necesario que dejen idenficación.
+
+* Recepción o seguridad
+Como rece
+
+* Visitante 
 
 
 Prototipado
 - Sketch
+![alt text](src/images/general.jpg)
 
 User testing
+<!-- see [Datos Demográficos] (https://docs.google.com/document/d/13jH3NyYmgFADmTpGEDxUVN7F2JLWEfQiwQ43yqM5xqw/edit#heading=h.t5gquk95zrh2) -->
