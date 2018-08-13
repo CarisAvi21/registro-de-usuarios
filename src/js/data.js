@@ -20,7 +20,6 @@ camera.style.display = 'none';
 endView.style.display = 'none';
 
 // Mail notification 
-
 (function() {
   emailjs.init('user_tQKEqfp1RDoxkEfhRcUTw');
 })();
