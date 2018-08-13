@@ -125,6 +125,13 @@ btnSend.addEventListener('click', (ev) => {
     .catch(function(error) {
       console.error('Error adding document: ', error);
     });
+  if (userName == '' || userEmail == '') {
+    swal(
+      'Te has registrado',
+      '¡En un momento recepción te dará indicaciones!',
+      'success'
+    );
+  }
 });
 
 /*
