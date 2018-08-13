@@ -19,6 +19,42 @@ let photoURL;
 camera.style.display = 'none';
 endView.style.display = 'none';
 
+// Mail notification 
+(function() {
+  emailjs.init('user_tQKEqfp1RDoxkEfhRcUTw');
+})();
+
+const vue = new Vue({
+  el: '#app',
+  data() {
+    return {
+      from_name: '',
+      from_email: '',
+    };
+  },
+  methods: {
+    enviar() {
+      let data = {
+        from_name: this.from_name,
+        from_email: this.from_email,
+      };
+
+      emailjs.send('gmail', 'notificaci_n_de_visita', data)
+        .then(function(response) {
+          if (response.text === 'OK') {
+            alert('Bienvenidx' + ' ' + userNameValue.substring(9));
+            window.location.assign('../index.html')
+
+          }
+        // console.log('SUCCESS. status=%d, text=%s', response.status, response.text);
+        }, function(err) {
+          alert('Ocurrió un problema al enviar el correo');
+        // console.log('FAILED. error=', err);
+        });
+    }
+  }
+});
+
 // Continue from form to camera
 continueToCamera.addEventListener('click', (ev) => {
   event.preventDefault(ev);
@@ -69,7 +105,6 @@ continueToCamera.addEventListener('click', (ev) => {
     navigator.mediaDevices.getUserMedia({video: true})
       .then(handleSuccess);
     userNameValue += userName.value;
-    userEmailValue += userEmail.value;
   } else {
     form.reportValidity();
   }
@@ -81,52 +116,16 @@ btnSend.addEventListener('click', (ev) => {
   let date = new Date();
   let dbRef = db.collection('user').add({
     name: userNameValue.substring(9),
-    email: userEmailValue.substring(9),
     blob: blobURL.substring(9),
     date: date
   }).then(function(docRef) {
     console.log('Document written with ID: ', docRef.id);
+    vue.enviar();
   })
     .catch(function(error) {
       console.error('Error adding document: ', error);
     });
-  // función para el envio de notificación por email
-  (function() {
-    emailjs.init('user_tQKEqfp1RDoxkEfhRcUTw');
-  })();
-
-  const vue = new Vue({
-    el: '#app',
-    data() {
-      return {
-        from_name: '',
-        from_email: '',
-      };
-    },
-    methods: {
-      enviar() {
-        let data = {
-          from_name: this.from_name,
-          from_email: this.from_email,
-        };
-
-        emailjs.send('gmail', 'notificaci_n_de_visita', data)
-          .then(function(response) {
-            if (response.text === 'OK') {
-              alert('El correo se ha enviado de forma exitosa');
-            }
-          // console.log('SUCCESS. status=%d, text=%s', response.status, response.text);
-          }, function(err) {
-            alert('Ocurrió un problema al enviar el correo');
-          // console.log('FAILED. error=', err);
-          });
-      }
-    }
-  });
-  // console.log(vue)
-  vue.enviar();
 });
-
 /*
 // Obteniendo Info del JSON
 
