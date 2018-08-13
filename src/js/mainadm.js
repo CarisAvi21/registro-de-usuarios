@@ -15,15 +15,15 @@ firebase.initializeApp(config);
 let db = firebase.firestore();
 
 db.collection('user').onSnapshot((querySnapshot) => {
-    querySnapshot.forEach(function(doc) {
-      let data = doc.data();
-        tableBody.innerHTML += `<tr>
+  querySnapshot.forEach(function(doc) {
+    let data = doc.data();
+    tableBody.innerHTML += `<tr>
       <th scope="row"><img class="user-photo" src="${data.blob}"></th>
       <td>${data.name}</td>
       <td>${data.email}</td>
       <td>${data.date}</td>
     </tr>`;
-      });
-    }).catch(function(error) {
-    console.log('Error getting documents: ', error);
   });
+}).catch(function(error) {
+  console.log('Error getting documents: ', error);
+});
