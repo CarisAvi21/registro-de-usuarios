@@ -13,8 +13,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
+
   <div class="container">
-      <main>
+      <main id="main">
         <h1>Bienvenido</h1>
         <form>
           <div class="input-group mb-3">
@@ -74,19 +75,26 @@
                     <option value="26">BACKYARD</option>
                   </select>
                   </div>
-            <section>
+
+                  <input type="submit"value="Enviar" class="btn btn-secondary btn-lg btn-block" id="btn-continue-to-camera">
+                </form><br>
+                </main>
+
+             <!-- Camera Section -->
+            <section id = "camera">
                 <video id="player" width="320" heigth="250" controls autoplay></video>
                 <canvas id="snapshot" width="320" height="240"></canvas>
-                <button id="capture" class="btn btn-secondary btn-lg btn-block" class="btnCap">Capturar</button>
+                <button id="capture" class="btn btn-secondary btn-lg btn-block btnCap">Capturar</button>
               </section>
+
+              <section id="end-view">
               <input type="submit"value="Enviar" class="btn btn-secondary btn-lg btn-block" id="btn-send">
-            </form><br>
-            </main>
+              </section>
             </div>
           <div class="card-footer text-muted">
     Terminal 1
   </div>
-  
+
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
