@@ -4,8 +4,8 @@
       padding: 0px;
     } */
 
-    /* font-family:Roboto,Arial,sans-serif;  
-#231F20 fondo gris de terminal 1 
+    /* font-family:Roboto,Arial,sans-serif;
+#231F20 fondo gris de terminal 1
 #EDE9DD blanco terminal 1 */
 
     body {
@@ -52,4 +52,7 @@ body{
       max-width: 1000px;
     }
 }
- 
+
+.user-photo {
+  width: 100px;
+}
