@@ -42,7 +42,10 @@ const vue = new Vue({
       emailjs.send('gmail', 'notificaci_n_de_visita', data)
         .then(function(response) {
           if (response.text === 'OK') {
-            alert('El correo se ha enviado de forma exitosa');
+            //alert('El correo se ha enviado de forma exitosa');
+            alert('Bienvenidx' + ' ' + userNameValue.substring(9));
+            window.location.assign('../index.html')
+
           }
         // console.log('SUCCESS. status=%d, text=%s', response.status, response.text);
         }, function(err) {
@@ -103,7 +106,6 @@ continueToCamera.addEventListener('click', (ev) => {
     navigator.mediaDevices.getUserMedia({video: true})
       .then(handleSuccess);
     userNameValue += userName.value;
-    userEmailValue += userEmail.value;
   } else {
     form.reportValidity();
   }
@@ -115,7 +117,6 @@ btnSend.addEventListener('click', (ev) => {
   let date = new Date();
   let dbRef = db.collection('user').add({
     name: userNameValue.substring(9),
-    email: userEmailValue.substring(9),
     blob: blobURL.substring(9),
     date: date
   }).then(function(docRef) {
@@ -126,7 +127,6 @@ btnSend.addEventListener('click', (ev) => {
       console.error('Error adding document: ', error);
     });
 });
-
 /*
 // Obteniendo Info del JSON
 
