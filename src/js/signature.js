@@ -4,7 +4,7 @@ ctx = lienzo.getContext('2d');
 document.addEventListener('mousedown',pulsaRaton,false);
 document.addEventListener('mousemove',mueveRaton,false);
 document.addEventListener('mouseup',levantaRaton,false);
-}
+
 
 function pulsaRaton(capturo){
 estoyDibujando = true;
