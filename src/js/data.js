@@ -42,9 +42,17 @@ const vue = new Vue({
       emailjs.send('gmail', 'notificaci_n_de_visita', data)
         .then(function(response) {
           if (response.text === 'OK') {
-            alert('Bienvenidx' + ' ' + userNameValue.substring(9));
-            window.location.assign('../index.html')
-
+            swal(
+              'Bienvenidx ' + '' + userNameValue.substring(9),
+              '¡En un momento recepción te dará indicaciones!',
+              'success'
+            );
+            let btn = document.getElementsByClassName('swal2-styled');
+            console.log(btn[0]);
+            btn[0].addEventListener('click', event => {
+              window.location.assign('../index.html');
+            });
+            // alert('Bienvenidx' + ' ' + userNameValue.substring(9));
           }
         // console.log('SUCCESS. status=%d, text=%s', response.status, response.text);
         }, function(err) {
@@ -116,7 +124,7 @@ btnSend.addEventListener('click', (ev) => {
   let date = new Date();
   let dbRef = db.collection('user').add({
     name: userNameValue.substring(9),
-    blob: blobURL.substring(9),
+    // blob: blobURL.substring(9),
     date: date
   }).then(function(docRef) {
     console.log('Document written with ID: ', docRef.id);
