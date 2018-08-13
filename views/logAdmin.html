@@ -9,7 +9,26 @@
     <title>Bienvenido Administrador</title>
 </head>
 <body>
+<div class="container">
+  <main>
+    <section id="visitors-info">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Foto</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Email</th>
+            <th scope="col">Hora Entrada</th>
+          </tr>
+        </thead>
+        <tbody id="show-data">
+           </tbody>
+      </table>
+    </section>
+  </main>
 
+</div>
+          
   <section id="login">
     <form>
       <div class="form-group">
@@ -22,22 +41,10 @@
       </div>
       <button type="submit" class="btn btn-primary" id="submit-login">Entrar</button>
     </form>
-  </section>
+        </section>
+       
 
-  <section id="visitors-info">
-      <table class="table table-hover">
-          <thead>
-            <tr>
-              <th scope="col">Foto</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Email</th>
-              <th scope="col">Hora Entrada</th>
-            </tr>
-          </thead>
-          <tbody id="show-data">
-          </tbody>
-        </table>
-  </section>
+  
 
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
