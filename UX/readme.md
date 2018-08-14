@@ -188,7 +188,7 @@ Recepcionista o personal de seguridad
 
 Ideación
 
-De acuerdo a la investigación realizada nos encontramos con la ambiguedad de los datos que son solicitados al tratar de acceder o rentar un espacio de Cowork, por lo que se piensa en diseñar una plataforma que asegure que los datos solicitados sean claros y resguardados en un sólo lugar.
+De acuerdo a la investigación realizada nos encontramos con la ambiguedad de los datos que son solicitados al tratar de acceder o rentar un espacio de Cowork, por lo que se piensa en diseñar una plataforma que asegure que los datos solicitados sean claros y resguardados en un sólo lugar, se sigue pensando que la persona ubicada en recepción o seguridad son indisplensables para brindar un trato personalizado, por lo que se busca facilitar sus actividades.
 
 ## Proceso de registro para T1
 
@@ -224,7 +224,13 @@ De acuerdo a la investigación realizada nos encontramos con la ambiguedad de lo
 
 ### Argumentación del diseño
 
-Se usan colores característicos de la marca como el gris, blanco y negro principalmente. Terminal 1 descataca por ser casual pero sobria en sus instalaciones.
+* Se usan colores característicos de la marca como el gris, blanco y negro principalmente. 
+* Terminal 1 destaca por ser casual pero sobria en sus instalaciones por lo que se piensa en una interfaz sencilla.
+* En la página de inicio se da la bienvenida al usuario, mostrando fotografías de las instalaciones y mostrando los eventos que se organizan espacialmente para los coworkers, pensando en que los visitantes pueden ser futuros clientes potenciales.
+* Al dar "click" en "Registrate aquí" se solicita una fotografía, nombre y firma del visitante, al dar "Siguiente" se envia a otra página donde solicitamos el nombre de la empresa que visita, asunto y persona con la que se dirige.
+* Por último, se visualiza un mensaje que le indica al visitante que su registro fue exitoso y debe de esperar indicaciones por parte de recepción.
+* El coworker en cuestión recibe una notificación de la visita vía e-mail.
+* Recepción puede ver la información en tiempo real, tomando en cuenta que la hora de entrada y fecha se guardan por default, ellos serán responsables de avisar a la persona en espera si es puede ingresar o no.
 
 
 ### Historias de Usuario
@@ -243,8 +249,8 @@ Como visitante de un esporádico de Coworking y demás espacios he notado que ha
 
 ## Prototipado
 
-<!-- - Flujo inicial 
-[Imagen](image/benchmark/Benchmark.xlsx) -->
+- Flujo inicial y prototipo de baja fidelidad
+[Archivo](https://drive.google.com/open?id=1WB9vZQxCu9iiOeAeTf4FsIf1JOqDFXR4)
 
 - Sketch
 ![alt text](image/sketch/sketchinicial.jpg "Sketch inicial")
