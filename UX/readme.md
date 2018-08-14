@@ -19,8 +19,11 @@ En este proyecto la empresa de coworking donde opera Laboratoria en tu ciudad "T
 **Desarrolladoras Front-end**
 
 *Florencia Silva Olivera*
+
 *Rocío Angelica Matias Durán*
+
 *Carolina Avilés Lara*
+
    * Implementar la interfaz de usuario diseñada (HTML/CSS/JS).
    * Deben dividirse las funcionalidades entre las dos desarrolladoras.
    * Todas los desarrollos deben incluir pruebas unitarias.
@@ -117,6 +120,7 @@ Usuaria habitual.
 * Los datos que se solicitan repetitvamente son fecha, nombre, hora de entrada y de salida, empresa que visitan y motivo.
 * El uso que le dan a esta información depende del usuario (Administrador, Recepción o Seguridad).
 * En el caso del Coworking como negocio, siempre están preocupados por crear una comunidad mediante eventos.
+* Los puntos de cantacto para los usuarios siempre serán en la entrada principal del edificio y en algunas ocasiones en el piso al que se dirigen se les puede solicitar un registro en específico para la empresa.
 
 ## Necesidades de los usuarios 
 
@@ -250,3 +254,4 @@ Como visitante de un esporádico de Coworking y demás espacios he notado que ha
 
 - User testing
 [Fotos y vídeos](https://drive.google.com/open?id=1NbbIVnRkUbQ-_DGSWNMwZV4BSKq3W-pY)
+
