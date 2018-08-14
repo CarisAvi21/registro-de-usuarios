@@ -1,0 +1,42 @@
+body {
+  background-color: #D8DCDB;
+  font-family: 'Roboto';
+  background-image: url('https://files.slack.com/files-pri/T0NNB6T0R-FC7SYRATF/portada.jpg');
+  opacity: 90%;
+}
+
+
+#cont {
+margin-left: 40.3%;
+margin-top: 20%;
+}
+
+#submit-login {
+  background-color: black;
+  border: none;
+  margin-bottom: 2%;
+}
+
+.login-section {
+  background-color: white;
+  opacity: 0.9;
+}
+h2 {
+  font-size: 220%;
+  letter-spacing: 3px;
+  margin-left: 12%;
+}
+h3 {
+  font-size: 90%;
+  letter-spacing: 2px;
+  margin-left: 4.9%;
+  margin-top: -2%;
+}
+
+#visitors-info {
+  background-color: white;
+}
+
+.user-photo {
+  width: 100px;
+}

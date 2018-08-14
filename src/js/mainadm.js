@@ -1,6 +1,6 @@
 const tableBody = document.getElementById('show-data');
 const infoSection = document.getElementById('visitors-info');
-const loginSection = document.getElementById('login');
+const loginSection = document.getElementById('main-login');
 const btnLogin = document.getElementById('submit-login');
 let password = document.getElementById('exampleInputPassword1');
 let email = document.getElementById('exampleInputEmail1');
@@ -14,10 +14,6 @@ btnLogin.addEventListener('click', (ev) => {
   if (email.value === 'admin@terminal1.com' || password.value === 'welcomeadmin') {
     loginSection.style.display = 'none';
     infoSection.style.display = 'block';
-  } else {
-    alert('Email o contraseña incorrecto'); 
-  }
-});
 
 // Initialize Firebase
 let config = {
@@ -40,8 +36,12 @@ db.collection('user').orderBy('date', 'desc').onSnapshot((querySnapshot) => {
     tableBody.innerHTML += `<tr>
       <th scope="row"><img class="user-photo" src="${data.blob}"></th>
       <td>${data.name}</td>
-      <td>${data.email}</td>
       <td>${data.date}</td>
     </tr>`;
   });
+});
+
+  } else {
+    alert('Email o contraseña incorrecto');
+  }
 });
