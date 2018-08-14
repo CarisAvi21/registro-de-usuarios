@@ -43,13 +43,16 @@ const vue = new Vue({
         .then(function(response) {
           if (response.text === 'OK') {
             swal(
-              '¡Bienvenidx!' + '' + userNameValue.substring(9),
-              'En un momento en recepción te darán indicaciones',
-              'succes'
+              'Bienvenidx ' + '' + userNameValue.substring(9),
+              '¡En un momento recepción te dará indicaciones!',
+              'success'
             );
+            let btn = document.getElementsByClassName('swal2-styled');
+            console.log(btn[0]);
+            btn[0].addEventListener('click', event => {
+              window.location.assign('../index.html');
+            });
             // alert('Bienvenidx' + ' ' + userNameValue.substring(9));
-            window.location.assign('../index.html')
-
           }
         // console.log('SUCCESS. status=%d, text=%s', response.status, response.text);
         }, function(err) {

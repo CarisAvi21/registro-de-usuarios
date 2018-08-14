@@ -22,20 +22,17 @@ header{
 p{
     color: #EDE9DD;
     font-family:Roboto,Arial,sans-serif;
-    font-size: 28px;
+    font-size: 35px;
 }
 
 .parrafo {
     font-family:Roboto,Arial,sans-serif;
-    font-size: 18px;
-    margin-top: 5%;
-
+    font-size: 13px;
 }
 
 #btnregistro{
   font-family:Roboto,Arial,sans-serif;
-  color: #231F20; 
-  margin-top: 5%;
+  color: rgb(255, 255, 255); 
 }
 /* #231F20 negro terminal 1 blanco #EDE9DD */
 @media screen and (max-width: 800px){
