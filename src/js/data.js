@@ -42,7 +42,12 @@ const vue = new Vue({
       emailjs.send('gmail', 'notificaci_n_de_visita', data)
         .then(function(response) {
           if (response.text === 'OK') {
-            alert('Bienvenidx' + ' ' + userNameValue.substring(9));
+            swal(
+              '¡Bienvenidx!' + '' + userNameValue.substring(9),
+              'En un momento en recepción te darán indicaciones',
+              'succes'
+            );
+            // alert('Bienvenidx' + ' ' + userNameValue.substring(9));
             window.location.assign('../index.html')
 
           }

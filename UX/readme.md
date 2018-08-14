@@ -26,6 +26,7 @@ En este proyecto la empresa de coworking donde opera Laboratoria en tu ciudad "T
    * Todas los desarrollos deben incluir pruebas unitarias.
 
 **Organización**
+   [Entregables](https://drive.google.com/open?id=1lVsW9s1L9unYV7HtKu5hi645F_dfOLX6)
    * El equipo organiza y lleva al día su tablero kanban.
    * Los objetivos del proyecto en cuanto a funcionalidad y proceso de UX están de forma visible mediante avisos escritos en el tablero correspondiente.
    * El equipo se comunica mediante un grupo cerrado de Slack.
@@ -52,11 +53,12 @@ Cada espacio de trabajo se maneja de forma diferente en cuanto al control de los
 - Coworkers
 - Visitantes 
 
-* Espacios visitados y características encontradas.
+## Espacios visitados y características encontradas.
 
-- El 3er espacio 
+### El 3er espacio 
 Ámterdam 240, 4° piso, Hipódromo, CDMX.
 Entrevista a Administración.
+[Documentación](https://drive.google.com/open?id=1LR6wFwaZzpiQQ3WoN3os-TUwBlppASwn)
 * Cuentan con una tarjeta que les da acceso o salida pero es genérica.
 * Sus visitantes y Coworkers se registran en una lista de papel.
 * Solicitan fecha, nombre, hora de entrada y de salida, en el caso de los visitantes nombre de la persona que buscan.
@@ -66,11 +68,12 @@ Entrevista a Administración.
 * Organiza pequeñas convivencias para crear "comunidad", por lo regular celebra los cumpleaños.
 * Para ella es muy importante tener una foto junto a los datos de sus visitantes o coworkers para poder atenderlos mejor ya que hay clientes que únicamente usan ese espacio como dirección fiscal. 
 
-- WeWork -Iron Hack
+### WeWork -Iron Hack
 Insurgentes Sur 601, Nápoles, CDMX.
-- WeWork 
+### WeWork 
 Montes Urales 424, Lomas de Chapultepec, CDMX.
 Entrevista a Coworker y visita como "cliente incógnito"
+[Documentación](https://drive.google.com/open?id=1zB_mVDFGhJQFspkyjmXiHeRg5k3PM3Ux)
 * Para entrar al edificio los visitantes se registran en una bitácora.
 * Solicitan fecha, hora de entrada y de salida, nombre, empresa que visitan y motivo.
 * Usan un registro digital en el que te piden Nombre y el nombre de la persona que visitas.
@@ -80,9 +83,10 @@ Entrevista a Coworker y visita como "cliente incógnito"
 * Los Coworkers tienen una tarjeta especial para registrar su entrada y salida.
 * La información recabada la puede ver el administrador y la persona que renta un espacio para sus empleados.
 
-- Telmex Hub
+### Telmex Hub
 Isabel la Católica 51, Centro Histórico, CDMX.
 Visita como "cliente incógnito"
+[Documentación](https://drive.google.com/open?id=1e2Nqu7OQhEIC4bsvDDWS8UODjVYPO1rB)
 * El usuario debe de "crear" una cuenta en su página para poder hacer uso de sus instalaciones sin ningún costo.
 * Solicitan nombre, fecha de nacimiento, sexo, intereses, correo electrónico y contraseña.
 * Se debe de hacer una reservación con 24 horas de anticipación como mínimo, informando cuantas personas asistirán y si desean ocupar una computadora.
@@ -91,10 +95,11 @@ Visita como "cliente incógnito"
 * Se hace otro registro en la recepción del Coworking mediante unas Laptop, ahí el visitante debe de ingresar el usuario y la contraseña previamente creadas, al terminar aparece un mensaje que dice "La entrada ha sido registrada".
 * El personal de la recepción te pide esperar un momento, en lo que visualizan tu registro y te indican en donde puedes trabajar.
 
-- Terminal 1
+### Terminal 1
 Tehuantepec 170, Roma, CDMX.
 Entrevista a Recepción y seguridad del edificio.
 Usuaria habitual.
+[Documentación](https://drive.google.com/open?id=1chxVz--lXK3YFdaeRBZREwntLs6M-jBv)
 * Tienen dos registros, uno para seguridad y otro para la recepción.
 * Solicitan fecha, nombre, empresa, motivo, hora de entrada y hora de salida.
 * Hace uso de papel y pluma únicamente.
@@ -110,10 +115,10 @@ Usuaria habitual.
 * Usan los registros por seguridad.
 * Siempre hay una persona a cargo de este proceso.
 * Los datos que se solicitan repetitvamente son fecha, nombre, hora de entrada y de salida, empresa que visitan y motivo.
-* El uso que le dan a esta información depende del usuario.
+* El uso que le dan a esta información depende del usuario (Administrador, Recepción o Seguridad).
 * En el caso del Coworking como negocio, siempre están preocupados por crear una comunidad mediante eventos.
 
-# Necesidades de los usuarios 
+## Necesidades de los usuarios 
 
 * Administrador 
 Tener un control de las personas que ingresan a mi edificio, como:
@@ -137,6 +142,11 @@ Recepcionista o personal de seguridad
 - Tener un registro con la foto de las personas que ingresan o trabajan en el Coworking para poder darles un trato personalizado.
 
 * Pain points: (En sus actividades diarias qué es lo que más les molesta u obstaculiza en el proceso de realizar sus actividades/objetivos)
+- La lentitud del registro para los visitantes. 
+- Tienen que estar imprimiendo bitácoras constantemente y la pérdida de plumas entorpece el proceso.
+- Si hay que consultar su lista de visitantes, deben de buscar línea por línea lo que necesiten sin contar que a veces la letra es ilegible.
+- No dan uso a la información recibida a su favor.
+
 
 ## Técnicas usadas en esta fase
 
@@ -151,7 +161,7 @@ Recepcionista o personal de seguridad
     * Terminal 1
     * Telmex Hub Isabel la Católica
      
-Objetivos del negocio Terminal 1
+### Objetivos del negocio Terminal 1
 
 - Compartir oficina y equipamientos.
 - Fomentar las relaciones estables entre profesionales de diferentes sectores que pueden desembocar en nuevas relaciones cliente-proveedor. 
@@ -159,7 +169,8 @@ Objetivos del negocio Terminal 1
 - Realizar eventos de integración entre su comunidad.
 - Personalizar la interacción del los empleados con los usuarios.​
 
-Motivaciones del negocio para el Registro de Usuarios
+### Motivaciones del negocio para el Registro de Usuarios
+
 -  Agilizar el proceso de registro y búsqueda de información.
 -  Denotar modernidad en sus instalaciones.
 -  Terminar con el uso de papel y pluma.
@@ -169,7 +180,7 @@ Motivaciones del negocio para el Registro de Usuarios
 -  Poder cuantificar el numéro de personas que accesan al edificio e identificar los motivos, teniendo en cuenta que prodrían surgir nuevos clientes.
 -  Promover los eventos realizados en sus instalaciones espacialmente para Coworkers e identificar su nivel de asistencia.
 
-Síntesis y definición
+### Síntesis y definición
 
 Ideación
 
@@ -177,26 +188,42 @@ De acuerdo a la investigación realizada nos encontramos con la ambiguedad de lo
 
 ## Proceso de registro para T1
 
-- Se requiere de una iPad o computadora con conexión a internet que pueda conectarse a la página para el registro [Liga oficial](https://carisavi21.github.io/registro-de-usuarios/index.html).
+- Se requiere de una iPad o computadora con conexión a internet que pueda conectarse a la página para el registro. [Liga oficial](https://carisavi21.github.io/registro-de-usuarios/index.html)
+
+- La página de inicio muestra una animación, que muestra los eventos más cercanos que ofrece Terminal 1 para crear una mejor convivencia entre los Coworkers.
+
+- En la parte superior derecha se muestra un título que dice "Adminsitración" enlace por el cual deberá acceder recepción, seguridad o el administrador del edificio.
 
 - El visitante debe de registrarse en la entrada del edificio mediante el iPad asignada para esta actividad, deberá poner Nombre, capturar su foto y firma continuando con los datos de la empresa que visita, motivo y persona con la que se dirige.
 
+- Se muestra un modal que le da la bienvenida al visitante y le pide que espere un momento, mientras recepción le da indicaciones, tiempo en el cual pueden avisar a la persona en cuestión.
+
 - Mediante esta herramienta es posible dar aviso de una visita a los Coworkers vía e-mail.
 
-- El "Administrador" debe iniciar sesión mediante un usuario y contraseña asignados para poder ver la data de los visitantes en tiempo real.
+- El "Administrador" debe iniciar sesión mediante un usuario y contraseña asignados para poder ver la data de los visitantes en tiempo real(foto, nombre, firma, empresa que visita, motivo y persona con la que se dirige).
 
 - Recepción o seguridad podrá registrar si fue posible recibir o no a la persona en cuestión, capturar hora de salida, comentarios, tener la facilidad de buscar por hora y fecha a los asistentes registrados siendo más fácil la ubicación de las personas por la foto capturada así un trato más personalizado.
 
-- Terminal 1 se caracteriza por crear una "comunidad", por lo que para ellos es importante saber si las actividades organizadas repercuten el la interacción entre sus Coworkers,esto se podría cuantificar determinando si en los días que se organizan Workshops, food truck day´s o catas de cerveza hay una mayor afluencia de gente.
+- Terminal 1 se caracteriza por crear una "comunidad", por lo que para ellos es importante saber si las actividades organizadas repercuten el la interacción entre sus Coworkers,esto se podría cuantificar determinando si en los días que se organizan Workshops, food truck day´s o catas de cerveza hay una mayor afluencia de asistentes.
 
-## Benchmark (externo) 
+### Benchmark (externo) 
 
-[Archivo excel con información de los principales competidores](image/benchmark/Benchmark.xlsx)
+[Archivo excel con información de los principales competidores](https://drive.google.com/open?id=1TqEPJbQ4lyzZUOCbcar8urPi2tkR6-Ua)
 
-## Target, argumentación del diseño (negocio y usuario)
+### Target
+
+* 52% de los Coworkers son hombres y el 48% son mujeres.
+* La edad promedio de las personas que deciden rentar uno de los espcios es de 39 años.
+* El 20% de los usuarios son menores de 30 años.
+* Podemos decir que buen número de ellos se dedica al mundo de la creación, del diseño y las nuevas tecnologías, como pueden ser fotógrafos, arquitectos, diseñadores, ingenieros, creativos, periodistas, programadores, y un largo etcétera de profesionales que tienen la oportunidad de ejercer su profesión como freelance y/o de manera más flexible en un entorno estimulante, abierto y adaptado a sus necesidades.
 
 
-## Historias de Usuario
+### Argumentación del diseño
+
+Se usan colores característicos de la marca como el gris, blanco y negro principalmente. Terminal 1 descataca por ser casual pero sobria en sus instalaciones.
+
+
+### Historias de Usuario
 
 * Administrador 
 Yo como administrador de un Coworking necesito saber cuantas oficinas tengo ocupadas y por cuanto tiempo fueron contratadas, cuantas personas están trabajando y ocupando mis espacios para determinar si debo de agregar gastor por uso de estos (baños, comedor, salas de juntas, estacionamientos, recepción por cuestiones de paquetería, etc.). Quiero saber el flujo de personas que entran y los principales motivos ya que pueden surgir clientes potenciales o en caso de robo, siniestros o algún tipo de emergencia deb de tener un registro de las personas que se encontraban en el edificio. 
@@ -210,17 +237,16 @@ Como recepcionista necesito agilizar el proceso de registro, ya que en ocasiones
 * Visitante 
 Como visitante de un esporádico de Coworking y demás espacios he notado que hay una gran diferencia entre unas oficinas y otras, algunas cuentan con un sistema digital y otras siguen con el clásico proceso de aputarte en hojas "sueltas" o en un libro y eso te hace perder más tiempo si es que vas de prisa; en una ocasión en recepción extraviaron mi INE y fue muy molesto esperar a que la encontraran, me gustaría que fuera un registro más rápido. 
 
-Prototipado
+## Prototipado
 
-- Flujo inicial 
-[Imagen](image/benchmark/Benchmark.xlsx)
+<!-- - Flujo inicial 
+[Imagen](image/benchmark/Benchmark.xlsx) -->
 
 - Sketch
 ![alt text](image/sketch/sketchinicial.jpg "Sketch inicial")
 
 - Prototipo de alta fidelidad
-[Liga de Marvel] (https://marvelapp.com/3bicje7/screen/46701850)
-<!-- [Ver imagenes](image/sketch) -->
+[Liga de Marvel](https://marvelapp.com/3bicje7/screen/46701850)
 
-User testing
-<!-- see [Datos Demográficos] (https://docs.google.com/document/d/13jH3NyYmgFADmTpGEDxUVN7F2JLWEfQiwQ43yqM5xqw/edit#heading=h.t5gquk95zrh2) -->
+- User testing
+[Fotos y vídeos](https://drive.google.com/open?id=1NbbIVnRkUbQ-_DGSWNMwZV4BSKq3W-pY)
